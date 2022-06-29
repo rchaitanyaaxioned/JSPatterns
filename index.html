@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8">
+    <title>JSPatterns</title>
+    <meta name="description" lang="en" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" media="screen" href="assets/vendor/font-awesome/css/all.min.css" >
+    <link rel="stylesheet" media="screen" href="assets/css/style.css" >
+  </head>
+  <body>
+    <!--container start-->
+    <div class="container">
+      <!--header section start-->
+      <header>
+      </header>
+      <!--header section ends-->
+      <!--main section start-->
+      <main>
+        <!-- <p class="pattern3"></p> -->
+
+      </main>
+      <!--main section end-->
+      <!--footer section start-->
+      <footer>      
+      </footer>
+      <!--footer section end-->
+    </div>
+    <!--container end-->
+    <!--script tag start here-->
+    <script>
+      //for pattern1
+
+      //for pattern2 
+      function pattern2() {
+        let n = 5;
+        let string = "";
+
+        // External loop
+        for (let i = 1; i <= n; i++) {
+          // printing spaces
+          for (let j = 1; j <= n - i; j++) {
+            string += " ";
+          }
+          // printing star
+          for (let k = 0; k < 2 * i - 1; k++) {
+            if (i === 1 || i === n) {
+              string += "*";
+            }
+            else {
+              if (k === 0 || k === 2 * i - 2) {
+                string += "*";
+              }
+              else {
+                string += " ";
+              }
+            }
+          }
+          string += "\n";
+        }
+        console.log(string);
+      }
+      pattern2();
+
+      //for pattern3
+     function pattern3() {
+        let n = 6, string = "";
+        // debugger;
+        for(let i=1;i<=n;i++){
+          for(let j=0;j<i;j++){
+            string += "#";
+          }
+          for(let k=0;k<n-1;k++){
+            string += " ";
+          }
+          string += "\n";
+        }
+        console.log(string);
+      }
+      pattern3();
+
+      //for pattern4
+      
+    </script>
+    <!--script tag end here-->
+
+
+  </body>
+</html>
