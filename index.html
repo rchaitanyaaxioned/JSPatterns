@@ -18,8 +18,6 @@
       <!--header section ends-->
       <!--main section start-->
       <main>
-        <!-- <p class="pattern3"></p> -->
-
       </main>
       <!--main section end-->
       <!--footer section start-->
@@ -31,19 +29,40 @@
     <!--script tag start here-->
     <script>
       //for pattern1
-
-      //for pattern2 
-      function pattern2() {
-        let n = 5;
-        let string = "";
-
-        // External loop
+      function pattern1() {
+        console.log("Pattern 1 :- ");
+        let n = 4,string = "";
+        //External loop
         for (let i = 1; i <= n; i++) {
-          // printing spaces
+          //printing spaces
           for (let j = 1; j <= n - i; j++) {
             string += " ";
           }
-          // printing star
+          //printing star and A
+          for (let k = 0; k < 2 * i - 1; k++) {
+            if (k % 2 == 0) {
+              string += "*";
+            } else {
+              string += "A";
+            }
+          }
+          string += "\n";
+        }
+        console.log(string);
+      }
+      pattern1();
+
+      //for pattern2 
+      function pattern2() {
+        console.log("Pattern 2 :- ");
+        let n = 5,string = "";
+        //External loop
+        for (let i = 1; i <= n; i++) {
+          //printing spaces
+          for (let j = 1; j <= n - i; j++) {
+            string += " ";
+          }
+          //printing star
           for (let k = 0; k < 2 * i - 1; k++) {
             if (i === 1 || i === n) {
               string += "*";
@@ -65,9 +84,11 @@
 
       //for pattern3
      function pattern3() {
+       console.log("Pattern 3 :- ");
         let n = 6, string = "";
-        // debugger;
+        //External loop
         for(let i=1;i<=n;i++){
+          //printing #
           for(let j=0;j<i;j++){
             string += "#";
           }
@@ -81,10 +102,45 @@
       pattern3();
 
       //for pattern4
-      
+      function pattern4() {
+        console.log("Pattern 4 :- ");
+        let n = 5,string = "";
+        //upper
+        //External loop
+        for (i = 1; i < n + 1; i++) {
+          string += "\n";
+          //printing star
+          for (j = 1; j <= n - i + 1; j++) {
+            string += "*";
+          }
+          for (j = 1; j < 2 * i - 1; j++) {
+            string += " ";
+          }
+          for (j = 1; j <= n - i + 1; j++) {
+            string += "*";
+          }
+        }
+
+        //lower
+        //External loop
+        for (i = n - 1; i > 0; i--) {
+          string += "\n";
+          //printing star
+          for (j = 1; j <= n - i + 1; j++) {
+            string += "*";
+          }
+          for (j = 1; j < 2 * i - 1; j++) {
+            string += " ";
+          }
+          for (j = 1; j <= n - i + 1; j++) {
+            string += "*";
+          }
+        }
+        console.log(string);
+      }
+      pattern4();
+
     </script>
     <!--script tag end here-->
-
-
   </body>
 </html>
